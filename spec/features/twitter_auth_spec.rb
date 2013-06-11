@@ -4,7 +4,7 @@ feature "Twitter Auth" do
   before do
     OmniAuth.config.mock_auth[:twitter] = {
       "extra" => {
-        "user_hash" => {
+        "raw_info" => {
           "id" => "12345",
           "screen_name" => "twit",
           "display_name" => "A Twit"
