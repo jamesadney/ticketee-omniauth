@@ -6,6 +6,7 @@ gem 'devise', '2.2.4'
 gem 'cancan', '1.6.10'
 gem 'paperclip', '3.4.2'
 gem 'searcher', :git => "git://github.com/radar/searcher"
+gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.6'

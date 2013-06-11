@@ -1,14 +1,14 @@
 <div id='ticket'>
   <h2><%= @ticket.title %></h2>
-  <span id='author'>Created by <%= @ticket.user.email %></span><br>
+  <span id='author'>Created by <%= @ticket.user.display_name %></span><br>
   <% authorized?("edit tickets", @project) do %>
     <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
   <% end %>
 
   <% authorized?("delete tickets", @project) do %>
-    <%= link_to "Delete Ticket", 
+    <%= link_to "Delete Ticket",
                 project_ticket_path(@project, @ticket),
-                :method => :delete, 
+                :method => :delete,
                 :confirm => "Are you sure you want to delete this ticket?" %>
   <% end %>
 
