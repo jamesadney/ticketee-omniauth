@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     else
       user = User.new(:email => "twitter+#{data["id"]}@example.com",
                       :password => Devise.friendly_token[0,20])
-      user.twitter_id = data["screen_name"]
+      user.twitter_id = data["id"]
       user.twitter_screen_name = data["screen_name"]
       user.twitter_display_name = data["display_name"]
       user.confirm!
