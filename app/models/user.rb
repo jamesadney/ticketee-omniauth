@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   has_many :permissions
 
   def self.find_or_create_for_twitter(response)
-    data = response["extra"]["user_hash"]
+    data = response["extra"]["raw_info"]
     if user = User.find_by_twitter_id(data["id"])
       user
     else
